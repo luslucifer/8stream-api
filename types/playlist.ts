@@ -7,6 +7,7 @@ export interface Root2 {
 }
 
 export interface Folder {
+  file?: string
   episode: string
   title: string
   id: string

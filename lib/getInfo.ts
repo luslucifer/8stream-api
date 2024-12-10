@@ -71,7 +71,7 @@ export default async function getInfo(origin:string,id: string ,ss?:undefined ,e
       if (ssObj){
         const epObj = ssObj.folder.find(obj => obj.episode == ep)
         if (epObj){
-          const newEpObjArr = epObj.folder.map(obj=>{
+          const newEpObjArr = epObj.folder.map((obj:any)=>{
            
           obj['get'] = `${origin}/getStream?file=${encodeURIComponent(obj.file)}&key=${encodeURIComponent(key)}`
           return obj
